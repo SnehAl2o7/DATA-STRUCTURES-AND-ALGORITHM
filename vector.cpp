@@ -9,12 +9,19 @@ int main()
     //  for (int i : v){
     //      cout << i << " ";
     //  }
-
+  
     vector<int> vec(5, 20); // initializing vector with 5 elements and all elements are 0
 
     // Basic vector operations
     // Accessing
     cout << v[0] << endl;
+
+    vector<int> vec(5, 0); // initializing vector with 5 elements and all elements are 0
+
+    // Basic vector operations
+    // Accessing
+    cout << v[0];
+
     cout << vec.at(0);
 
     // Updating
