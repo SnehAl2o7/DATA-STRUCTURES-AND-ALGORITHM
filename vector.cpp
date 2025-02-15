@@ -15,10 +15,14 @@ int main()
 
     // Basic vector operations
     // Accessing
+
     cout << endl
          << v[0] << endl;
     cout << vec.at(0) << endl;
 
+    cout << v[0];
+
+    cout << vec.at(0);
     // Updating
     v[0] = 10;
     vec[4] = 90;
@@ -36,6 +40,7 @@ int main()
 
     // sorting a vector
     sort(v.begin(), v.end());
+
     v.begin(); // begin of vecotr return as pointer
     v.end();   // end of vector return as pointer
     return 0;
