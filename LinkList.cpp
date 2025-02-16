@@ -165,7 +165,7 @@ int main()
     printlist(head);
     head = insertAtPosition(head, 34, 4);
     printlist(head);
-    head = deleteNode(head, 34);
+    head = deleteNode(head, 3);
     printlist(head);
     return 0;
 }
