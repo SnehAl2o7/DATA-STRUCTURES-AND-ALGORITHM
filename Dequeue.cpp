@@ -11,6 +11,17 @@ void printdq(deque<int> dq)
     cout << endl;
 }
 
+void printpdq(deque<pair<int, bool>> &contain)
+{
+    for (auto curr : contain)
+    {
+        pair<int, bool> pr = curr;
+        cout << "[";
+
+        cout << pr.first << ' ' << pr.second;
+        cout << "]\n";
+    }
+}
 int main()
 {
     /*
@@ -42,5 +53,23 @@ int main()
     dq.pop_back();
     printdq(dq);
 
-    return 0;
+    /*
+    IMPLEMENTING DEQUEUE WITH PAIR OF DATATYPE
+    HERE USING A PAIR AS INPUT TYPE
+    */
+
+    deque<pair<int, bool>> contain;
+    pair<int, bool> pair1;
+
+    pair1 = make_pair(22, false);
+    contain.push_front(pair1);
+
+    pair<int, bool> pair2;
+    pair2 = make_pair(33, true);
+
+    pair<int, bool> pair3;
+    pair3 = make_pair(11, false);
+
+    pair<int, bool> pair4;
+    pair4 = make_pair(4, true);
 }
