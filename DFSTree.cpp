@@ -55,7 +55,6 @@ void rinorder(Node *root)
         curr = curr->right;
     }
 }
-
 // ROOT - LEFT - RIGHT
 void preorder(Node *root)
 {
@@ -142,7 +141,6 @@ int main()
 
     cout << "Post order representation" << endl;
     postorder(root);
-
     cout << "\n Iterative Post order representation" << endl;
     rpostorder(root);
 
@@ -157,4 +155,10 @@ int main()
 
     cout << "\n Iterative Inorder representation : " << endl;
     rinorder(root);
+
+    cout << "\nPre order representation" << endl;
+    preorder(root);
+
+    cout << "\n In order representation" << endl;
+    inorder(root);
 }
