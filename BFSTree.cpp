@@ -40,6 +40,44 @@ vector<vector<int>> BFS(Node *root)
     return res;
 }
 
+// BFS APPROACH TO REPRESENT A TREE
+// USING QUEUE APPROACH ITERATIVE
+vector<vector<int>> IterativeBFS(Node *root)
+{
+    if (root == NULL)
+        return {};
+
+    queue<Node *> q;
+    vector<vector<int>> res;
+
+    q.push(root);
+    int curr = 0;
+
+    while (!q.empty())
+    {
+        int len = q.size();
+        res.push_back({});
+        for (int i = 0; i < len; i++)
+        {
+            Node *temp = q.front();
+            q.pop();
+
+            res[curr].push_back(root->data);
+
+            if (root->left != nullptr)
+            {
+                q.push(root->left);
+            }
+            if (root->right != nullptr)
+            {
+                q.push(root->right);
+            }
+            curr++;
+        }
+        return res;
+    }
+}
+
 int main()
 {
     Node *root = new Node(1);
@@ -50,7 +88,17 @@ int main()
     root->right->left = new Node(6);
 
     vector<vector<int>> res = BFS(root);
-    cout << "BFS Traversal of the tree is: \n";
+    cout << "Recursive BFS Traversal of the tree is: \n";
+    for (vector<int> level : res)
+    {
+        for (int node : level)
+        {
+            cout << node << " ";
+        }
+    }
+
+    vector<vector<int>> ans = IterativeBFS(root);
+    cout << "Iterative BFS Traversal of the tree is: \n";
     for (vector<int> level : res)
     {
         for (int node : level)
